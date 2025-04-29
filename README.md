@@ -25,6 +25,14 @@ This project visualizes network traffic geolocation by analyzing a Wireshark pac
 5. **Output**: The KML file (`output.kml`) is saved and can be imported into Google Maps for visualization.
 6. **Visualization**: The final map (as shown below) displays the network paths, with lines connecting locations like the United States and Spain.
 
+7. ## Results
+The output KML file was successfully visualized on Google Maps, showing network connections as red lines across the globe. In the example visualization, multiple connections are mapped between the eastern United States and Spain, with a consistent distance of 172,271.14 km, indicating the approximate path length over the North Atlantic Ocean.
+
+### Visualization
+Below is a screenshot of the network traffic paths visualized on Google Maps:
+
+![Network Traffic Map](images/map.png)
+
 ## Python Script
 The script (`script.py`) is structured into three main functions:
 - `retKML(dstip, srcip)`: Retrieves geographical coordinates for IPs and returns a KML placemark with a line connecting the two locations.
