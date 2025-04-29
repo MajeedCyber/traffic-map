@@ -6,7 +6,7 @@ gi = pygeoip.GeoIP('GeoLiteCity.dat')
 
 def retKML(dstip, srcip):
     dst = gi.record_by_name(dstip)
-    src = gi.record_by_name('x.xxx.xxx.xxx')  # <-- You might want to fix this later
+    src = gi.record_by_name('x.xxx.xxx.xxx')  
     try:
         dstlongitude = dst['longitude']
         dstlatitude = dst['latitude']
@@ -57,9 +57,9 @@ def main():
 
     kmldoc = kmlheader + plotIPs(pcap) + kmlfooter
 
-    print(kmldoc)  # Still printing to console if you want to see it
+    print(kmldoc)  
 
-    # ✅ Save to file
+   
     with open('output.kml', 'w') as out:
         out.write(kmldoc)
 
